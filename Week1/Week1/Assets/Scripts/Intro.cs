@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Intro : MonoBehaviour {
-	Color myColor = new Color (0f, 0.6f, 0.8f);
+	Color myColor = new Color (0.76f, 0.69f, 0.5f);
 	Vector3 pos;
 	// Use this for initialization
 	void Start () {
 		//Debug.Log ("This is my first script");
 		//Debug.Log(this.transform.position); //position in world
 		//Debug.Log (this.transform.localPosition); //position in relation to another object
-		myColor = new Color(pos.x, pos.y, pos.z);
+		//myColor = new Color(pos.x, pos.y, pos.z);
 		pos = this.transform.position;
 
 	}
@@ -20,11 +20,11 @@ public class Intro : MonoBehaviour {
 		Debug.Log ("This is my repeated message");
 		pos = this.transform.position;
 		//pos.x += 0.1f;
-		//pos.y -= 0.2f;
-		//pos.z -= 0.05f;
+		pos.y += 0.08f;
+		//pos.z += 0.05f;
 		this.transform.position = pos;
 		Debug.Log (this.transform.position);
-		myColor = new Color(pos.x, pos.y, pos.z);
+		//myColor = new Color(pos.x, pos.y, pos.z);
 		this.GetComponent<MeshRenderer> ().materials [0].color = myColor;
 
 	}
